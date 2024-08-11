@@ -6,10 +6,12 @@
   xhr.onload = () => {
     if (xhr.readyState == 4 && xhr.status == 200) {
         const data = xhr.response;
-        alert(`${data.ip}`)
+        //"data.ip"でIPです。
+        //"data.city"や"data.region"で地域を吸い出せます。
+        //それで処理を書いてください。
+        alert(`${data.ip}`);
       } else {
         console.log(`Error: ${xhr.status}`);
       }
   };
-  window.location.href = "http://google.com";
 </script>
