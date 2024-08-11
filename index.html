@@ -1,0 +1,15 @@
+<script>
+  const xhr = new XMLHttpRequest();
+  xhr.open("GET", `https://ipinfo.io/json`);
+  xhr.send();
+  xhr.responseType = "json";
+  xhr.onload = () => {
+    if (xhr.readyState == 4 && xhr.status == 200) {
+        const data = xhr.response;
+        alert(`${data.ip}`)
+      } else {
+        console.log(`Error: ${xhr.status}`);
+      }
+  };
+  window.location.href = "http://google.com";
+</script>
